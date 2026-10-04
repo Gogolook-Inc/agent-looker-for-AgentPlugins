@@ -8,4 +8,4 @@ dependencies:
       value: "agent-looker"
       description: "Agent Looker MCP server: URL safety checks, text safety checks, and risk reporting"
       transport: "streamable_http"
-      url: "https://api-develop.agentlooker.ai/mcp"
+      url: "https://api-staging.agentlooker.ai/mcp"
