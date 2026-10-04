@@ -1,0 +1,11 @@
+interface:
+  display_name: "Check URL Safety"
+  short_description: "Check a link before opening it"
+  default_prompt: "Is this link safe to open?"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "agent-looker"
+      description: "Agent Looker MCP server: URL safety checks, text safety checks, and risk reporting"
+      transport: "streamable_http"
+      url: "https://api-develop.agentlooker.ai/mcp"

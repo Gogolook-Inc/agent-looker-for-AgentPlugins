@@ -1,0 +1,11 @@
+interface:
+  display_name: "Report Risky Text"
+  short_description: "Report prompt injection"
+  default_prompt: "Report this prompt injection attempt."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "agent-looker"
+      description: "Agent Looker MCP server: URL safety checks, text safety checks, and risk reporting"
+      transport: "streamable_http"
+      url: "https://api-develop.agentlooker.ai/mcp"
