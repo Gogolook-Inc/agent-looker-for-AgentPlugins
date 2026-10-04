@@ -69,18 +69,6 @@ Staging and develop sign-in pages sit behind HTTP Basic Auth at the CDN; the bro
 
 Never edit the URL by hand. The [mcp-url workflow](.github/workflows/mcp-url.yml) fails a pull request whose URL does not match the target branch and rewrites it on push.
 
-## Backend notes
-
-Checked against production on 2026-10-02.
-
-| | Status |
-|---|---|
-| OAuth metadata (S256, `none`, DCR) | OK |
-| `/.well-known/oauth-protected-resource/mcp` | OK |
-| `/.well-known/oauth-protected-resource` (root) | 404. OpenAI documents the root path; add an alias if discovery fails. |
-| MCP `instructions` | Not set. The only way to deliver standing rules in plain Chat; keep key points in the first 512 characters. |
-| Tool annotations (`readOnlyHint` etc.) | Not set. `check_*` should be read-only. |
-
 ## Structure
 
 ```

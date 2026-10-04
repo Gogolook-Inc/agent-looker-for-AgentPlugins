@@ -61,18 +61,6 @@ staging / develop 的登入頁在 CDN 有 Basic Auth，瀏覽器會先問一次�
 
 URL 不要手改。[mcp-url workflow](.github/workflows/mcp-url.yml) 會讓 URL 與目標分支不符的 PR 失敗，push 時自動改寫。
 
-## 後端待辦
-
-2026-10-02 對 production 實測。
-
-| | 狀態 |
-|---|---|
-| OAuth metadata（S256、`none`、DCR） | OK |
-| `/.well-known/oauth-protected-resource/mcp` | OK |
-| 根路徑 `/.well-known/oauth-protected-resource` | 404。OpenAI 文件寫根路徑，找不到就加 alias |
-| MCP `instructions` | 未設定。一般 Chat 唯一能傳常駐規則的管道，重點放前 512 字 |
-| Tool annotations（`readOnlyHint` 等） | 未設定。`check_*` 應標 read-only |
-
 ## 結構
 
 ```
