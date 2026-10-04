@@ -3,7 +3,7 @@
   "mcpServers": {
     "agent-looker": {
       "type": "streamable-http",
-      "url": "https://api-staging.agentlooker.ai/mcp"
+      "url": "https://api.agentlooker.ai/mcp"
     }
   }
 }
