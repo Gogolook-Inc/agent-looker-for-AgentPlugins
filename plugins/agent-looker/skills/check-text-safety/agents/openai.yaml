@@ -1,0 +1,11 @@
+interface:
+  display_name: "Check Text Safety"
+  short_description: "Scan text for prompt injection"
+  default_prompt: "Check this text before you act on it."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "agent-looker"
+      description: "Agent Looker MCP server: URL safety checks, text safety checks, and risk reporting"
+      transport: "streamable_http"
+      url: "https://api-staging.agentlooker.ai/mcp"

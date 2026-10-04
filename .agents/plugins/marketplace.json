@@ -1,0 +1,20 @@
+{
+  "name": "agent-looker",
+  "interface": {
+    "displayName": "Agent Looker"
+  },
+  "plugins": [
+    {
+      "name": "agent-looker",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-looker"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
