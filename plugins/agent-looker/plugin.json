@@ -24,6 +24,7 @@
   ],
   "extensions": {
     "com.openai": {
+      "hooks": "./hooks/hooks.json",
       "interface": {
         "displayName": "Agent Looker",
         "shortDescription": "Block unsafe URLs and text",
