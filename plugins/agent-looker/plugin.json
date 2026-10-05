@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agent-looker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Agent Looker safety guardrails for AI agents: URL safety checks, external text safety checks, and proactive risk reporting through the Agent Looker MCP server. Packaged to the Agent Plugins specification.",
   "author": {
     "name": "Gogolook",
@@ -24,6 +24,7 @@
   ],
   "extensions": {
     "com.openai": {
+      "hooks": "./hooks/hooks.json",
       "interface": {
         "displayName": "Agent Looker",
         "shortDescription": "Block unsafe URLs and text",

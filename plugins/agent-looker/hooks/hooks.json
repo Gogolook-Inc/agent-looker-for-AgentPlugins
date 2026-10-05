@@ -5,8 +5,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"${PLUGIN_ROOT}/hooks/session-start.json\"",
-            "commandWindows": "type \"%PLUGIN_ROOT%\\hooks\\session-start.json\"",
+            "command": "cat \"${PLUGIN_ROOT}/context/session-start.json\"",
+            "commandWindows": "type \"%PLUGIN_ROOT%\\context\\session-start.json\"",
             "statusMessage": "Loading Agent Looker safety rules"
           }
         ]
@@ -18,8 +18,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"${PLUGIN_ROOT}/hooks/pre-context.json\"",
-            "commandWindows": "type \"%PLUGIN_ROOT%\\hooks\\pre-context.json\""
+            "command": "cat \"${PLUGIN_ROOT}/context/pre-context.json\"",
+            "commandWindows": "type \"%PLUGIN_ROOT%\\context\\pre-context.json\""
           }
         ]
       }
@@ -30,8 +30,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"${PLUGIN_ROOT}/hooks/post-context.json\"",
-            "commandWindows": "type \"%PLUGIN_ROOT%\\hooks\\post-context.json\""
+            "command": "cat \"${PLUGIN_ROOT}/context/post-context.json\"",
+            "commandWindows": "type \"%PLUGIN_ROOT%\\context\\post-context.json\""
           }
         ]
       }
