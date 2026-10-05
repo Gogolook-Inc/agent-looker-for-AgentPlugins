@@ -70,7 +70,8 @@ plugins/agent-looker/
   plugin.json          # portable manifest，OpenAI 設定在 extensions.com.openai
   mcp.json             # streamable-http server
   skills/*/            # SKILL.md + agents/openai.yaml
-  hooks/               # hooks.json + 靜態 context payload
+  hooks/hooks.json     # SessionStart / PreToolUse / PostToolUse
+  context/             # hooks 輸出的靜態 additionalContext payload
   assets/              # icon.png 128px、logo.png 512px
 ```
 

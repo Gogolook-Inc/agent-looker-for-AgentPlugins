@@ -78,7 +78,8 @@ plugins/agent-looker/
   plugin.json          # portable manifest, OpenAI settings in extensions.com.openai
   mcp.json             # streamable-http server
   skills/*/            # SKILL.md + agents/openai.yaml
-  hooks/               # hooks.json + static context payloads
+  hooks/hooks.json     # SessionStart / PreToolUse / PostToolUse
+  context/             # static additionalContext payloads printed by the hooks
   assets/              # icon.png 128px, logo.png 512px
 ```
 
