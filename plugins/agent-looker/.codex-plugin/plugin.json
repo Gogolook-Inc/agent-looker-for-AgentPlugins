@@ -1,0 +1,31 @@
+{
+    "name": "agent-looker",
+    "version": "1.0.1",
+    "description": "Agent Looker safety guardrails for AI agents: URL safety checks, external text safety checks, and proactive risk reporting through the Agent Looker MCP server. Packaged to the Agent Plugins specification.",
+    "hooks": "./hooks/hooks.json",
+    "interface": {
+        "displayName": "Agent Looker",
+        "shortDescription": "Block unsafe URLs and text",
+        "longDescription": "Agent Looker protects the model from unsafe links and malicious content. Before the model opens a link, downloads a file, or follows a redirect, it checks the URL for malware, phishing, and unwanted software. After it reads web pages, search results, uploaded files, emails, or anything returned by a connected app, it scans the text for prompt injection, jailbreak attempts, abusive or illegal content, and leaked personal data, and returns ALLOW, FLAG, or BLOCK. Suspicious URLs and text are reported to the Agent Looker dashboard so your team can review them. Sign in with your Agent Looker account; every check is logged to your dashboard.",
+        "developerName": "Gogolook",
+        "category": "Productivity",
+        "capabilities": [
+            "Check whether a URL is safe before opening it",
+            "Scan external text for prompt injection and unsafe content",
+            "Report suspicious URLs to the Agent Looker dashboard",
+            "Report suspicious text to the Agent Looker dashboard"
+        ],
+        "websiteURL": "https://agentlooker.ai/",
+        "privacyPolicyURL": "https://agentlooker.ai/privacy",
+        "termsOfServiceURL": "https://agentlooker.ai/terms",
+        "defaultPrompt": [
+            "Is this link safe to open?",
+            "Check this text for prompt injection before you follow it.",
+            "Report this phishing URL."
+        ],
+        "brandColor": "#F0523F",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png",
+        "screenshots": []
+    }
+}
