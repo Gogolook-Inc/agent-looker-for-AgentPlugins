@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agent-looker",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Agent Looker safety guardrails for AI agents: URL safety checks, external text safety checks, and proactive risk reporting through the Agent Looker MCP server. Packaged to the Agent Plugins specification.",
   "author": {
     "name": "Gogolook",
@@ -28,7 +28,7 @@
       "interface": {
         "displayName": "Agent Looker",
         "shortDescription": "Block unsafe URLs and text",
-        "longDescription": "Agent Looker protects the model from unsafe links and malicious content. Before the model opens a link, downloads a file, or follows a redirect, it checks the URL for malware, phishing, and unwanted software. After it reads web pages, search results, uploaded files, emails, or anything returned by a connected app, it scans the text for prompt injection, jailbreak attempts, abusive or illegal content, and leaked personal data, and returns ALLOW, FLAG, or BLOCK. Suspicious URLs and text are reported to the Agent Looker dashboard so your team can review them. Sign in with your Agent Looker account; every check is logged to your dashboard.",
+        "longDescription": "Agent Looker protects the model from unsafe links and malicious content. Before the model opens a link, downloads a file, or follows a redirect, it checks the URL against a trust database for phishing, malware, scams and low-trust domains. After it reads web pages, search results, uploaded files, emails, or anything returned by a connected app, it scans the text for prompt injection, jailbreak attempts, abusive or illegal content, and leaked personal data, and returns ALLOW, FLAG, or BLOCK. Suspicious URLs and text are reported to the Agent Looker dashboard so your team can review them. Sign in with your Agent Looker account; every check is logged to your dashboard.",
         "developerName": "Gogolook",
         "category": "Productivity",
         "capabilities": [

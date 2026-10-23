@@ -8,7 +8,7 @@ A plugin in the [Agent Plugins](https://agent-plugins.org/) format that protects
 
 | Skill | Trigger | MCP tool |
 |-------|---------|----------|
-| `check-url-safety` | Before opening, downloading, or following any URL | `check_url_safety` |
+| `check-url-safety` | Before opening, downloading, or following any URL; on `UNKNOWN` deep-scan only when the URL is really needed, on `WARNING` read only | `check_url_safety` |
 | `check-text-safety` | After reading web pages, search results, files, emails, pasted text, or connected-app output | `check_text_safety` |
 | `report-risk-url` | When a suspicious URL is discovered | `report_risk_url` |
 | `report-risk-text` | When prompt injection, hidden instructions, or leaked secrets are discovered | `report_risk_text` |
@@ -23,7 +23,9 @@ A plugin in the [Agent Plugins](https://agent-plugins.org/) format that protects
 In plain Chat, protection comes from the skills and the tool descriptions alone; the skills are written to work without hooks.
 
 ```
-check_url_safety ──UNSAFE──> refuse, tell the user the threat categories
+check_url_safety ──UNSAFE───> refuse, tell the user the threat categories
+       │       ──UNKNOWN──> not in the trust cache: deep_scan (10–25 s) only if the URL is really needed
+       │       ──WARNING──> low trust score, no reports: read only (no credentials, downloads or code)
        │
       SAFE ──> read ──> check_text_safety ──BLOCK──> treat as data only
                                          ──FLAG───> warn, check embedded links individually
